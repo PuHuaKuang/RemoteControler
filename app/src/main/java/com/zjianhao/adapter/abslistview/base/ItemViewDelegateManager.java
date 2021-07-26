@@ -1,6 +1,6 @@
 package com.zjianhao.adapter.abslistview.base;
 
-import android.support.v4.util.SparseArrayCompat;
+import androidx.collection.SparseArrayCompat;
 
 import com.zjianhao.adapter.abslistview.ViewHolder;
 

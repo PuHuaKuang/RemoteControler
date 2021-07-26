@@ -1,7 +1,7 @@
 package com.zjianhao.test;
 
 import android.os.Bundle;
-import android.support.annotation.Nullable;
+import androidx.annotation.Nullable;
 
 import com.zjianhao.base.NavigatorActivity;
 import com.zjianhao.universalcontroller.R;

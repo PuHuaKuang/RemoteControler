@@ -1,7 +1,7 @@
 package com.zjianhao.module.electrical.ui;
 
 import android.os.Bundle;
-import android.support.annotation.Nullable;
+import androidx.annotation.Nullable;
 import android.view.Gravity;
 import android.view.View;
 import android.widget.Button;
@@ -11,8 +11,8 @@ import com.zjianhao.module.electrical.util.NumberPopupWindow;
 import com.zjianhao.universalcontroller.R;
 
 import at.markushi.ui.CircleButton;
+import butterknife.BindView;
 import butterknife.ButterKnife;
-import butterknife.InjectView;
 import butterknife.OnClick;
 
 /**
@@ -24,41 +24,41 @@ import butterknife.OnClick;
 
 public class DVDControllerAty extends ControllerAty implements NumberPopupWindow.NumberClickListener {
 
-    @InjectView(R.id.dvd_ok)
+    @BindView(R.id.dvd_ok)
     Button dvdOk;
-    @InjectView(R.id.dvd_up)
+    @BindView(R.id.dvd_up)
     CircleButton dvdUp;
-    @InjectView(R.id.dvd_left)
+    @BindView(R.id.dvd_left)
     CircleButton dvdLeft;
-    @InjectView(R.id.dvd_down)
+    @BindView(R.id.dvd_down)
     CircleButton dvdDown;
-    @InjectView(R.id.dvd_right)
+    @BindView(R.id.dvd_right)
     CircleButton dvdRight;
-    @InjectView(R.id.dvd_power)
+    @BindView(R.id.dvd_power)
     LinearLayout dvdPower;
-    @InjectView(R.id.dvd_menu)
+    @BindView(R.id.dvd_menu)
     LinearLayout dvdMenu;
-    @InjectView(R.id.dvd_mute)
+    @BindView(R.id.dvd_mute)
     LinearLayout dvdMute;
-    @InjectView(R.id.dvd_exit)
+    @BindView(R.id.dvd_exit)
     LinearLayout dvdExit;
-    @InjectView(R.id.sound_sub)
+    @BindView(R.id.sound_sub)
     LinearLayout soundSub;
-    @InjectView(R.id.sound_add)
+    @BindView(R.id.sound_add)
     LinearLayout soundAdd;
-    @InjectView(R.id.num_keys)
+    @BindView(R.id.num_keys)
     LinearLayout numKeys;
-    @InjectView(R.id.dvd_previous)
+    @BindView(R.id.dvd_previous)
     LinearLayout dvdPrevious;
-    @InjectView(R.id.dvd_back_fast)
+    @BindView(R.id.dvd_back_fast)
     LinearLayout dvdBackFast;
-    @InjectView(R.id.dvd_play)
+    @BindView(R.id.dvd_play)
     LinearLayout dvdPlay;
-    @InjectView(R.id.dvd_go_fast)
+    @BindView(R.id.dvd_go_fast)
     LinearLayout dvdGoFast;
-    @InjectView(R.id.dvd_next)
+    @BindView(R.id.dvd_next)
     LinearLayout dvdNext;
-    @InjectView(R.id.dvd_pause)
+    @BindView(R.id.dvd_pause)
     LinearLayout dvdPause;
     private boolean isPlay = false;
 
@@ -68,7 +68,7 @@ public class DVDControllerAty extends ControllerAty implements NumberPopupWindow
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.ele_controller_dvd_main);
-        ButterKnife.inject(this);
+        ButterKnife.bind(this);
 
     }
 

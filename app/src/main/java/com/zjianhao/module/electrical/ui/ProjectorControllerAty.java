@@ -1,7 +1,7 @@
 package com.zjianhao.module.electrical.ui;
 
 import android.os.Bundle;
-import android.support.annotation.Nullable;
+import androidx.annotation.Nullable;
 import android.view.View;
 import android.widget.Button;
 import android.widget.LinearLayout;
@@ -9,8 +9,8 @@ import android.widget.LinearLayout;
 import com.zjianhao.universalcontroller.R;
 
 import at.markushi.ui.CircleButton;
+import butterknife.BindView;
 import butterknife.ButterKnife;
-import butterknife.InjectView;
 import butterknife.OnClick;
 
 /**
@@ -21,25 +21,25 @@ import butterknife.OnClick;
  */
 
 public class ProjectorControllerAty extends ControllerAty {
-    @InjectView(R.id.buton_ok)
+    @BindView(R.id.buton_ok)
     Button butonOk;
-    @InjectView(R.id.dvd_up)
+    @BindView(R.id.dvd_up)
     CircleButton projectorUp;
-    @InjectView(R.id.projector_left)
+    @BindView(R.id.projector_left)
     CircleButton projectorLeft;
-    @InjectView(R.id.projector_down)
+    @BindView(R.id.projector_down)
     CircleButton projectorDown;
-    @InjectView(R.id.projector_right)
+    @BindView(R.id.projector_right)
     CircleButton projectorRight;
-    @InjectView(R.id.projector_power)
+    @BindView(R.id.projector_power)
     LinearLayout projectorPower;
-    @InjectView(R.id.projector_menu)
+    @BindView(R.id.projector_menu)
     LinearLayout projectorMenu;
-    @InjectView(R.id.projector_mute)
+    @BindView(R.id.projector_mute)
     LinearLayout projectorMute;
-    @InjectView(R.id.sound_sub)
+    @BindView(R.id.sound_sub)
     LinearLayout soundSub;
-    @InjectView(R.id.sound_add)
+    @BindView(R.id.sound_add)
     LinearLayout soundAdd;
 
     private boolean isOpen = false;
@@ -48,7 +48,7 @@ public class ProjectorControllerAty extends ControllerAty {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.ele_controller_projector_main);
-        ButterKnife.inject(this);
+        ButterKnife.bind(this);
     }
 
     @OnClick({R.id.buton_ok, R.id.dvd_up, R.id.projector_left, R.id.projector_down, R.id.projector_right, R.id.projector_power, R.id.projector_menu, R.id.projector_mute, R.id.sound_sub, R.id.sound_add})

@@ -1,7 +1,7 @@
 package com.zjianhao.module.electrical.ui;
 
 import android.os.Bundle;
-import android.support.annotation.Nullable;
+import androidx.annotation.Nullable;
 import android.view.View;
 import android.widget.Button;
 import android.widget.LinearLayout;
@@ -9,8 +9,8 @@ import android.widget.LinearLayout;
 import com.zjianhao.universalcontroller.R;
 
 import at.markushi.ui.CircleButton;
+import butterknife.BindView;
 import butterknife.ButterKnife;
-import butterknife.InjectView;
 import butterknife.OnClick;
 
 /**
@@ -21,32 +21,32 @@ import butterknife.OnClick;
  */
 
 public class SmartBoxControllerAty extends ControllerAty {
-    @InjectView(R.id.smart_box_power)
+    @BindView(R.id.smart_box_power)
     LinearLayout smartBoxPower;
-    @InjectView(R.id.smart_box_menu)
+    @BindView(R.id.smart_box_menu)
     LinearLayout smartBoxMenu;
-    @InjectView(R.id.smart_box_back)
+    @BindView(R.id.smart_box_back)
     LinearLayout smartBoxBack;
-    @InjectView(R.id.sound_sub)
+    @BindView(R.id.sound_sub)
     CircleButton soundSub;
-    @InjectView(R.id.sound_add)
+    @BindView(R.id.sound_add)
     CircleButton soundAdd;
-    @InjectView(R.id.smart_box_home)
+    @BindView(R.id.smart_box_home)
     CircleButton smartBoxHome;
-    @InjectView(R.id.tvbox_up)
+    @BindView(R.id.tvbox_up)
     Button tvboxUp;
-    @InjectView(R.id.tvbox_left)
+    @BindView(R.id.tvbox_left)
     Button tvboxLeft;
-    @InjectView(R.id.tvbox_right)
+    @BindView(R.id.tvbox_right)
     Button tvboxRight;
-    @InjectView(R.id.tvbox_down)
+    @BindView(R.id.tvbox_down)
     Button tvboxDown;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.ele_controller_smart_box_main);
-        ButterKnife.inject(this);
+        ButterKnife.bind(this);
         System.out.println("deviceId:" + deviceId);
     }
 

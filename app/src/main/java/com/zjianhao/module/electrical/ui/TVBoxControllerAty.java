@@ -1,14 +1,14 @@
 package com.zjianhao.module.electrical.ui;
 
 import android.os.Bundle;
-import android.support.annotation.Nullable;
+import androidx.annotation.Nullable;
 import android.view.View;
 import android.widget.Button;
 import android.widget.LinearLayout;
 
 import com.zjianhao.universalcontroller.R;
 
-import butterknife.InjectView;
+import butterknife.BindView;
 import butterknife.OnClick;
 
 /**
@@ -20,49 +20,49 @@ import butterknife.OnClick;
 
 public class TVBoxControllerAty extends ControllerAty {
 
-    @InjectView(R.id.tvbox_power)
+    @BindView(R.id.tvbox_power)
     LinearLayout tvboxPower;
-    @InjectView(R.id.tvbox_menu)
+    @BindView(R.id.tvbox_menu)
     LinearLayout tvboxMenu;
-    @InjectView(R.id.txbox_back)
+    @BindView(R.id.txbox_back)
     LinearLayout txboxBack;
-    @InjectView(R.id.channel_add)
+    @BindView(R.id.channel_add)
     Button channelAdd;
-    @InjectView(R.id.channel_sub)
+    @BindView(R.id.channel_sub)
     Button channelSub;
-    @InjectView(R.id.sound_add)
+    @BindView(R.id.sound_add)
     Button soundAdd;
-    @InjectView(R.id.sound_sub)
+    @BindView(R.id.sound_sub)
     Button soundSub;
-    @InjectView(R.id.tvbox_up)
+    @BindView(R.id.tvbox_up)
     Button tvboxUp;
-    @InjectView(R.id.tvbox_ok)
+    @BindView(R.id.tvbox_ok)
     Button tvboxOk;
-    @InjectView(R.id.tvbox_left)
+    @BindView(R.id.tvbox_left)
     Button tvboxLeft;
-    @InjectView(R.id.tvbox_right)
+    @BindView(R.id.tvbox_right)
     Button tvboxRight;
-    @InjectView(R.id.tvbox_down)
+    @BindView(R.id.tvbox_down)
     Button tvboxDown;
-    @InjectView(R.id.num_1)
+    @BindView(R.id.num_1)
     Button num1;
-    @InjectView(R.id.num_2)
+    @BindView(R.id.num_2)
     Button num2;
-    @InjectView(R.id.num_3)
+    @BindView(R.id.num_3)
     Button num3;
-    @InjectView(R.id.num_4)
+    @BindView(R.id.num_4)
     Button num4;
-    @InjectView(R.id.num_5)
+    @BindView(R.id.num_5)
     Button num5;
-    @InjectView(R.id.num_6)
+    @BindView(R.id.num_6)
     Button num6;
-    @InjectView(R.id.num_7)
+    @BindView(R.id.num_7)
     Button num7;
-    @InjectView(R.id.num_8)
+    @BindView(R.id.num_8)
     Button num8;
-    @InjectView(R.id.num_9)
+    @BindView(R.id.num_9)
     Button num9;
-    @InjectView(R.id.num_0)
+    @BindView(R.id.num_0)
     Button num0;
 
 

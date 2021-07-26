@@ -2,9 +2,9 @@ package com.zjianhao.module.pc;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
+import androidx.annotation.Nullable;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -23,8 +23,8 @@ import com.zjianhao.universalcontroller.R;
 import java.util.ArrayList;
 import java.util.List;
 
+import butterknife.BindView;
 import butterknife.ButterKnife;
-import butterknife.InjectView;
 
 /**
  * Created by 张建浩（Clarence) on 2017-4-10 16:26.
@@ -35,9 +35,9 @@ import butterknife.InjectView;
 
 public class PCFragment extends BaseFragment implements PCHostAdapter.HostClickListener {
 
-    @InjectView(R.id.pc_host_list)
+    @BindView(R.id.pc_host_list)
     RecyclerView recycleView;
-    @InjectView(R.id.no_host_remind_info)
+    @BindView(R.id.no_host_remind_info)
     TextView noHostRemindInfo;
 
     private PCHostAdapter adapter;
@@ -56,7 +56,7 @@ public class PCFragment extends BaseFragment implements PCHostAdapter.HostClickL
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.pc_fragment_main, container, false);
-        ButterKnife.inject(this, view);
+        ButterKnife.bind(this, view);
         adapter = new PCHostAdapter(getActivity(), hosts);
         recycleView.setAdapter(adapter);
         adapter.setOnHostClickListener(this);
@@ -79,7 +79,6 @@ public class PCFragment extends BaseFragment implements PCHostAdapter.HostClickL
     @Override
     public void onDestroyView() {
         super.onDestroyView();
-        ButterKnife.reset(this);
     }
 
 //    @OnClick(R.id.host_search)

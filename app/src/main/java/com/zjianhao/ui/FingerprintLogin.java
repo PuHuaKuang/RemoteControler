@@ -1,6 +1,5 @@
 package com.zjianhao.ui;
 
-import android.app.Application;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Color;
@@ -9,8 +8,8 @@ import android.os.Bundle;
 import android.os.CancellationSignal;
 import android.os.Handler;
 import android.os.Message;
-import android.support.annotation.Nullable;
-import android.support.v7.app.AlertDialog;
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.AlertDialog;
 import android.view.KeyEvent;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -20,18 +19,10 @@ import com.zjianhao.http.DefaultCallback;
 import com.zjianhao.http.ResponseHeader;
 import com.zjianhao.http.RetrofitManager;
 import com.zjianhao.model.User;
-import com.zjianhao.module.electrical.model.Brand;
 import com.zjianhao.universalcontroller.AppApplication;
-import com.zjianhao.universalcontroller.Constant;
 import com.zjianhao.universalcontroller.MainActivity;
 import com.zjianhao.universalcontroller.R;
 import com.zjianhao.utils.SharePreferenceUtils;
-
-import org.json.JSONException;
-
-import java.io.IOException;
-import java.util.List;
-import java.util.concurrent.TimeUnit;
 
 import retrofit2.Call;
 

@@ -1,6 +1,6 @@
 package com.zjianhao.universalcontroller;
 
-import android.support.test.runner.AndroidJUnit4;
+import androidx.test.ext.junit.runners.AndroidJUnit4;
 
 import com.zjianhao.module.electrical.model.Brand;
 

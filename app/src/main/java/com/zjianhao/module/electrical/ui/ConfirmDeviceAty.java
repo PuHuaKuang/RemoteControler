@@ -1,7 +1,7 @@
 package com.zjianhao.module.electrical.ui;
 
 import android.os.Bundle;
-import android.support.annotation.Nullable;
+import androidx.annotation.Nullable;
 import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
@@ -21,8 +21,8 @@ import com.zjianhao.utils.CircularAnim;
 
 import java.util.List;
 
+import butterknife.BindView;
 import butterknife.ButterKnife;
-import butterknife.InjectView;
 import butterknife.OnClick;
 import retrofit2.Call;
 
@@ -34,11 +34,11 @@ import retrofit2.Call;
  */
 
 public class ConfirmDeviceAty extends NavigatorActivity {
-    @InjectView(R.id.device_name)
+    @BindView(R.id.device_name)
     EditText deviceName;
-    @InjectView(R.id.device_add_confirm)
+    @BindView(R.id.device_add_confirm)
     Button deviceAddConfirm;
-    @InjectView(R.id.key_load_progress)
+    @BindView(R.id.key_load_progress)
     FrameLayout keyLoadProgress;
     private int deviceId;
     private int typeId;
@@ -48,7 +48,7 @@ public class ConfirmDeviceAty extends NavigatorActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.ele_device_confirm_main);
-        ButterKnife.inject(this);
+        ButterKnife.bind(this);
         String brandName = getIntent().getStringExtra("brand_name");
         brandId = getIntent().getIntExtra("brand_id", 0);
         typeId = getIntent().getIntExtra("type_id", 1);

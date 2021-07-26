@@ -1,14 +1,14 @@
 package com.zjianhao.module.electrical.ui;
 
 import android.os.Bundle;
-import android.support.annotation.Nullable;
+import androidx.annotation.Nullable;
 import android.view.View;
 import android.widget.LinearLayout;
 
 import com.zjianhao.universalcontroller.R;
 
+import butterknife.BindView;
 import butterknife.ButterKnife;
-import butterknife.InjectView;
 import butterknife.OnClick;
 
 /**
@@ -19,17 +19,17 @@ import butterknife.OnClick;
  */
 
 public class FanControllerAty extends ControllerAty {
-    @InjectView(R.id.fan_power)
+    @BindView(R.id.fan_power)
     LinearLayout fanPower;
-    @InjectView(R.id.fan_mode)
+    @BindView(R.id.fan_mode)
     LinearLayout fanMode;
-    @InjectView(R.id.fan_mute)
+    @BindView(R.id.fan_mute)
     LinearLayout fanMute;
-    @InjectView(R.id.wind_speed)
+    @BindView(R.id.wind_speed)
     LinearLayout windSpeed;
-    @InjectView(R.id.fan_timer)
+    @BindView(R.id.fan_timer)
     LinearLayout fanTimer;
-    @InjectView(R.id.fan_shake)
+    @BindView(R.id.fan_shake)
     LinearLayout fanShake;
     private boolean isOpen = false;
 
@@ -37,7 +37,7 @@ public class FanControllerAty extends ControllerAty {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.ele_controller_fan_main);
-        ButterKnife.inject(this);
+        ButterKnife.bind(this);
     }
 
     @OnClick({R.id.fan_power, R.id.fan_mode, R.id.fan_mute, R.id.wind_speed, R.id.fan_timer, R.id.fan_shake})

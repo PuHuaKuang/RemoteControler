@@ -9,7 +9,7 @@ import android.os.IBinder;
 import android.preference.PreferenceManager;
 import android.speech.RecognitionListener;
 import android.speech.SpeechRecognizer;
-import android.support.annotation.Nullable;
+import androidx.annotation.Nullable;
 import android.util.AndroidRuntimeException;
 import android.util.Log;
 import android.widget.Toast;

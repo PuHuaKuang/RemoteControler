@@ -1,14 +1,14 @@
 package com.zjianhao.module.electrical.ui;
 
 import android.os.Bundle;
-import android.support.annotation.Nullable;
+import androidx.annotation.Nullable;
 import android.view.View;
 import android.widget.Button;
 
 import com.zjianhao.universalcontroller.R;
 
+import butterknife.BindView;
 import butterknife.ButterKnife;
-import butterknife.InjectView;
 import butterknife.OnClick;
 
 /**
@@ -19,9 +19,9 @@ import butterknife.OnClick;
  */
 
 public class CameraControllerAty extends ControllerAty {
-    @InjectView(R.id.camera_power)
+    @BindView(R.id.camera_power)
     Button cameraPower;
-    @InjectView(R.id.camera_take_photos)
+    @BindView(R.id.camera_take_photos)
     Button cameraTakePhotos;
 
 
@@ -29,7 +29,7 @@ public class CameraControllerAty extends ControllerAty {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.ele_controller_camera_main);
-        ButterKnife.inject(this);
+        ButterKnife.bind(this);
 
     }
 

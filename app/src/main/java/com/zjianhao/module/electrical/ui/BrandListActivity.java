@@ -2,9 +2,9 @@ package com.zjianhao.module.electrical.ui;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
+import androidx.annotation.Nullable;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 import android.view.View;
 import android.widget.ProgressBar;
 import android.widget.Toast;
@@ -25,8 +25,8 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
+import butterknife.BindView;
 import butterknife.ButterKnife;
-import butterknife.InjectView;
 import retrofit2.Call;
 
 /**
@@ -37,11 +37,11 @@ import retrofit2.Call;
  */
 
 public class BrandListActivity extends NavigatorActivity implements OnSelectIndexItemListener {
-    @InjectView(R.id.brand_list)
+    @BindView(R.id.brand_list)
     RecyclerView brandList;
-    @InjectView(R.id.right_side_bar)
+    @BindView(R.id.right_side_bar)
     WaveSideBar rightSideBar;
-    @InjectView(R.id.load_brand_progress)
+    @BindView(R.id.load_brand_progress)
     ProgressBar loadBrandProgress;
 
     private BrandAdapter adapter;
@@ -56,7 +56,7 @@ public class BrandListActivity extends NavigatorActivity implements OnSelectInde
 
         setTitle("品牌列表");
         setContentView(R.layout.ele_brand_list_main);
-        ButterKnife.inject(this);
+        ButterKnife.bind(this);
         typeId = getIntent().getIntExtra("type_id", 1);
         brandList.setLayoutManager(new LinearLayoutManager(this));
         adapter = new BrandAdapter(this, R.layout.ele_brand_item, brands);

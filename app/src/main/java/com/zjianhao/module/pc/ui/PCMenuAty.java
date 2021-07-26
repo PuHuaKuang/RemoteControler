@@ -8,8 +8,8 @@ import android.widget.Button;
 import com.zjianhao.base.NavigatorActivity;
 import com.zjianhao.universalcontroller.R;
 
+import butterknife.BindView;
 import butterknife.ButterKnife;
-import butterknife.InjectView;
 import butterknife.OnClick;
 
 /**
@@ -20,13 +20,13 @@ import butterknife.OnClick;
  */
 
 public class PCMenuAty extends NavigatorActivity {
-    @InjectView(R.id.remote_shutdown_btn)
+    @BindView(R.id.remote_shutdown_btn)
     Button remoteShutdownBtn;
-    @InjectView(R.id.remote_ppt_btn)
+    @BindView(R.id.remote_ppt_btn)
     Button remotePptBtn;
-    @InjectView(R.id.remote_mouse_btn)
+    @BindView(R.id.remote_mouse_btn)
     Button remoteMouseBtn;
-    @InjectView(R.id.adb_wireless_debug_btn)
+    @BindView(R.id.adb_wireless_debug_btn)
     Button adbWirelessDebugBtn;
 
 
@@ -34,7 +34,7 @@ public class PCMenuAty extends NavigatorActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.pc_menu_function_menu);
-        ButterKnife.inject(this);
+        ButterKnife.bind(this);
     }
 
 

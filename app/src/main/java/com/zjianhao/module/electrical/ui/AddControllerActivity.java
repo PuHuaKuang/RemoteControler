@@ -2,11 +2,11 @@ package com.zjianhao.module.electrical.ui;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
-import android.support.constraint.ConstraintLayout;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.LinearSnapHelper;
-import android.support.v7.widget.RecyclerView;
+import androidx.annotation.Nullable;
+import androidx.constraintlayout.widget.ConstraintLayout;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.LinearSnapHelper;
+import androidx.recyclerview.widget.RecyclerView;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ProgressBar;
@@ -33,7 +33,6 @@ import java.util.Collections;
 import java.util.List;
 
 import butterknife.ButterKnife;
-import butterknife.InjectView;
 import butterknife.OnClick;
 import retrofit2.Call;
 
@@ -45,19 +44,19 @@ import retrofit2.Call;
  */
 
 public class AddControllerActivity extends NavigatorActivity {
-    @InjectView(R.id.key_test_list)
+
     RecyclerView keyTestList;
-    @InjectView(R.id.key_effect_container)
+
     ConstraintLayout keyEffectContainer;
-    @InjectView(R.id.key_test_num)
+
     TextView keyTestNum;
-    @InjectView(R.id.key_test_name)
+
     TextView keyTestName;
-    @InjectView(R.id.key_effect_no)
+
     Button keyEffectNo;
-    @InjectView(R.id.key_effect_yes)
+
     Button keyEffectYes;
-    @InjectView(R.id.key_load_progress)
+
     ProgressBar keyLoadProgress;
     private List<KeyTest> keyTests = new ArrayList<>();
     private int typeId;
@@ -67,13 +66,22 @@ public class AddControllerActivity extends NavigatorActivity {
     private int currentPosition;
     private InfraredUtil infraredUtil;
 
+    private void findViews() {
+        keyTestList = findViewById(R.id.key_test_list);
+        keyEffectContainer = findViewById(R.id.key_effect_container);
+        keyTestNum = findViewById(R.id.key_test_num);
+        keyTestName = findViewById(R.id.key_test_name);
+        keyEffectNo = findViewById(R.id.key_effect_no);
+        keyEffectYes = findViewById(R.id.key_effect_yes);
+        keyLoadProgress = findViewById(R.id.key_load_progress);
+    }
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setTitle("按键测试");
         setContentView(R.layout.ele_key_test_main);
-        ButterKnife.inject(this);
+        findViews();
         typeId = getIntent().getIntExtra("type_id", 1);
         brandId = getIntent().getIntExtra("brand_id", 1);
         keyTestList.setLayoutManager(new ScrollSpeedLinearLayoutManger(this, LinearLayoutManager.HORIZONTAL, false));

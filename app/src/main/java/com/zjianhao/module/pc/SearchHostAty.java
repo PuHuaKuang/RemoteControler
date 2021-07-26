@@ -4,9 +4,9 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
-import android.support.annotation.Nullable;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
+import androidx.annotation.Nullable;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.LinearInterpolator;
@@ -22,8 +22,8 @@ import com.zjianhao.universalcontroller.R;
 
 import java.util.ArrayList;
 
+import butterknife.BindView;
 import butterknife.ButterKnife;
-import butterknife.InjectView;
 
 /**
  * Created by 张建浩（Clarence) on 2017-4-11 16:23.
@@ -33,11 +33,11 @@ import butterknife.InjectView;
  */
 
 public class SearchHostAty extends BaseActivity implements BroadcastDiscovery.DiscoverHostListener {
-    @InjectView(R.id.radar_scanning)
+    @BindView(R.id.radar_scanning)
     ImageView scanning;
-    @InjectView(R.id.recycleView)
+    @BindView(R.id.recycleView)
     RecyclerView recycleView;
-    @InjectView(R.id.no_host_remind_info)
+    @BindView(R.id.no_host_remind_info)
     TextView noHostRemindInfo;
     private RotateAnimation animation;
     private PCHostAdapter adapter;
@@ -67,7 +67,7 @@ public class SearchHostAty extends BaseActivity implements BroadcastDiscovery.Di
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.pc_scan_main);
-        ButterKnife.inject(this);
+        ButterKnife.bind(this);
         startRadarAnimation();
         adapter = new PCHostAdapter(this, hosts);
         recycleView.setAdapter(adapter);

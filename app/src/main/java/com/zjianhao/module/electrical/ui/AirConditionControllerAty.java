@@ -1,7 +1,7 @@
 package com.zjianhao.module.electrical.ui;
 
 import android.os.Bundle;
-import android.support.annotation.Nullable;
+import androidx.annotation.Nullable;
 import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -19,8 +19,8 @@ import com.zjianhao.utils.VibratorUtil;
 import com.zjianhao.view.IconFont;
 
 import at.markushi.ui.CircleButton;
+import butterknife.BindView;
 import butterknife.ButterKnife;
-import butterknife.InjectView;
 import butterknife.OnClick;
 import retrofit2.Call;
 
@@ -32,23 +32,23 @@ import retrofit2.Call;
  */
 
 public class AirConditionControllerAty extends NavigatorActivity {
-    @InjectView(R.id.air_state)
+    @BindView(R.id.air_state)
     TextView airState;
-    @InjectView(R.id.air_temperature)
+    @BindView(R.id.air_temperature)
     TextView airTemperature;
-    @InjectView(R.id.air_mode_text)
+    @BindView(R.id.air_mode_text)
     TextView airModeText;
-    @InjectView(R.id.air_mode_img)
+    @BindView(R.id.air_mode_img)
     IconFont airModeImg;
-    @InjectView(R.id.air_cmd_on)
+    @BindView(R.id.air_cmd_on)
     LinearLayout airCmdOn;
-    @InjectView(R.id.air_cmd_off)
+    @BindView(R.id.air_cmd_off)
     LinearLayout airCmdOff;
-    @InjectView(R.id.air_cmd_increase)
+    @BindView(R.id.air_cmd_increase)
     LinearLayout airCmdIncrease;
-    @InjectView(R.id.air_cmd_decrease)
+    @BindView(R.id.air_cmd_decrease)
     LinearLayout airCmdDecrease;
-    @InjectView(R.id.air_cmd_mode)
+    @BindView(R.id.air_cmd_mode)
 
     CircleButton airCmdMode;
     private AirCondition airCondition;
@@ -60,7 +60,7 @@ public class AirConditionControllerAty extends NavigatorActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.ele_controller_air_condition_main);
-        ButterKnife.inject(this);
+        ButterKnife.bind(this);
         infraredUtil = new InfraredUtil(this);
         deviceId = getIntent().getIntExtra("device_id", 0);
         setTitle(getIntent().getStringExtra("device_name"));
